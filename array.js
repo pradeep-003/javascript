@@ -11,6 +11,9 @@ let arr_nums1 = [1,2,3,4,5]
 len = arr_nums1.length
 process.stdout.write(len+" ")
 
+let arr_num = [5]
+console.log(arr_num) // [5]
+
 //other way to define array
 
 arr = Array(1,2,3,4,5)
@@ -49,7 +52,7 @@ function sumOfArray(arr2){
 }
 
 let arr = [1,2,3,4,5,6]
-// console.log(sumOfArray(arr))
+console.log(sumOfArray(arr))
 
 // another way to iterate array
 

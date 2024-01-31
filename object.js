@@ -13,7 +13,7 @@ const user = {
 }
 
 console.log(user)  
-// { '1': 'Vishwa', '2': 'Mohan', '3': 'Sheetal' }  
+// { '1': 'Vishwa', '2': 'Mohan', true: 'Sheetal' }  
 // Js Treating 1,2,true as String
 // as only String and symbol can be used as key
 console.log(typeof user)
@@ -26,6 +26,7 @@ const person1 = {
         console.log("Hello Students")
     }
 }
+person1.greet()
 
 // 2nd way to create object
 // Using Constructor
@@ -88,11 +89,51 @@ console.log(person2)
 delete person2["name"];
 console.log(person2)
 
+delete person2
+console.log(person2) // delete can't delete the entire person2
+
+// if a object want to access the method of another object then we use call,apply,blind
+
+const person3 = {
+    firstName: "Rahul",
+    lastName: "Dua"
+}
+const person4 = {
+    fullName: function(city, country){
+       // console.log(arguments)
+        console.log(`${this.firstName} ${this.lastName} lives in ${city}, ${country}`)
+    }
+}
+
+person4.fullName.call(person3, 'New Delhi', 'India') // this in general refer to person4 but in case i call then it refer to called function person 3
+person4.fullName.call(person3, 'Washintion', 'USA') 
+person4.fullName.apply(person3, ['Washintion', 'USA']) // arguments passed as array in case of apply 
+
+const bound = person4.fullName.bind(person3) 
+bound('New Delhi', 'India')
+bound('Katmandu', 'Nepal')
+bound('Karanchi', 'Pakistan')
+bound('Colombo', 'Srilanka')
+
+function printFullName(personName){
+    console.log(`Welcome ${personName} to ${this.firstName} ${this.lastName}`)
+}
+
+let person5 = {
+    firstName: "PW",
+    lastName: "Skills"
+}
+printFullName.call(person5, "Vishwa Mohan")
+
+function randomNo_0to10(){
+let y = Math.random()*10
+x = Math.trunc(y)
+return x
+}
+
+console.log(randomNo_0to10())
 
 
-
-
-
-
-
-
+const obj1 = new Object({9:"Rohit", 10:"Kohli"})
+console.log(obj1)
+console.log(typeof obj1)

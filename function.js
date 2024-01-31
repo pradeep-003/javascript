@@ -37,8 +37,8 @@ const hello_func = function hello(){
 }
 // hello() -- errror hello() is not defined
 hello_func()
-
-// console.log(hello_func());  
+console.log(hello_func());  
+// Hello my dear friend
 // Hello my dear friend
 // undefined
 
@@ -152,7 +152,7 @@ sum = (a,b)=>{
     return a+b     // only one statement 
 }
 
-sum = (a,b) => a+b
+sum = a => a
 console.log(sum(3,4))
 
 findEvenOrOdd = (num)=>{

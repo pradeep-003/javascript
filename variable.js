@@ -25,7 +25,7 @@ const condition1 = true
 let condition2 = false
 
 console.log(condition1);
-console.log(typeof condition1);
+console.log(typeof condition1);  // boolean
 
 let values = 0/0 
 

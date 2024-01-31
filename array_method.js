@@ -27,6 +27,8 @@ console.log(l)
 arr1 = [3,4,5,6]
 arr2 = [7,8,9]
 
+console.log(arr1.join('-'))
+
 arr = arr1.concat(arr2)
 console.log(arr)
 
@@ -60,6 +62,7 @@ console.log(arr.slice(-1))
 console.log(arr.slice(-1, -4)) 
 console.log(arr.slice(-4, -1)) 
 console.log(arr.slice(-15, -1)) 
+console.log(arr.slice(-15, 6)) 
 console.log(arr.slice(-15, 0)) 
 console.log(arr.slice(1,-3)) 
 
@@ -87,3 +90,14 @@ console.log(arr.sort())  // [1, 11, 12, 2, 23,  3,  4]
 // because sort method use alphabetic sorting so it's better to give function to sort
 
 console.log(arr.sort((a,b)=>a-b))
+
+
+arr = [3,2,1,5,4,9]
+arr.splice(4,2)
+console.log(arr)
+arr.splice(2,1,6,4,6)
+console.log(arr)
+arr.splice(2,0,9)
+console.log(arr)
+
+
