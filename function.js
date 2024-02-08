@@ -168,3 +168,10 @@ console.log(findEvenOrOdd(22))
 
 findEvenOrOdd = a => a%2 == 0 ? "Even" : "odd"  //Single line arrow + Terniary operator
 console.log(findEvenOrOdd(23))
+
+// arrowFunction returning an object
+cs = (x,y) => ({
+    sum:x+y,
+    diff:x-y
+})
+console.log(cs(5,4))

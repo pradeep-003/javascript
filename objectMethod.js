@@ -12,6 +12,10 @@ const student = {
 // List of all the keys in the given object
 
 console.log(Object.keys(student))
+let stu =  Object.keys(student)
+for(num of stu){
+    console.log(num)
+}
 
 // List of all the values in the given object
 
@@ -21,7 +25,7 @@ console.log(Object.values(student))
 console.log(Object.entries(student))
 
 //assign
-stu_new = Object.assign({},student,{role : "developer"})
+stu_new = Object.assign({},student,{role : "developer", Grade : "a+"})
 console.log(stu_new)
 
 student.jobType = "remote";

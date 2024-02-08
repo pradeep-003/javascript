@@ -34,6 +34,10 @@ person1.greet()
 const obj = new Object()
 console.log(obj)
 
+const obj1 = new Object({9:"Rohit", 10:"Kohli"})
+console.log(obj1)
+console.log(typeof obj1)
+
 // 3rd way to create object
 // Using function
 
@@ -92,7 +96,7 @@ console.log(person2)
 delete person2
 console.log(person2) // delete can't delete the entire person2
 
-// if a object want to access the method of another object then we use call,apply,blind
+// if a object want to access the method of another object then we use call,apply,bind
 
 const person3 = {
     firstName: "Rahul",
@@ -134,6 +138,4 @@ return x
 console.log(randomNo_0to10())
 
 
-const obj1 = new Object({9:"Rohit", 10:"Kohli"})
-console.log(obj1)
-console.log(typeof obj1)
+

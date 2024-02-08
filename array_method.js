@@ -101,3 +101,32 @@ arr.splice(2,0,9)
 console.log(arr)
 
 
+const array1 = [5,3,8,1];
+const array2 = [7,2,6,4];
+
+const concatenatedAndSorted = (() =>{
+    const result = array1.concat(array2);
+    return result.sort((a,b)=>b-a);
+});
+
+console.log(concatenatedAndSorted());
+
+const numbers = [1,2,3,2,4,5,5,6]
+const uniqueNumbers = [];
+let uniqueSum = 0;
+for(num of numbers){
+    if(!uniqueNumbers.includes(num)){
+        uniqueNumbers.push(num)
+        uniqueSum += num
+    }
+}
+console.log(uniqueSum)
+
+
+const orignalArray = [1,2,3,4,5];
+const k = 2;
+
+const rotationIndex = k % orignalArray.length
+console.log(rotationIndex)
+const rotatedArray = orignalArray.slice(-rotationIndex).concat(orignalArray.slice(0, -rotationIndex));
+console.log(rotatedArray);
