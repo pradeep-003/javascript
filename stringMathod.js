@@ -6,11 +6,12 @@ console.log(hello); // strings are immutable
 console.log(hello.at(2))
 console.log(hello.at(-3))
 console.log(hello[-3]) // -ve in box is not allowed
+console.log(hello[3]) 
 
 console.log(hello.charAt(3)) // // -ve is not allowed
 
 console.log(hello.endsWith('ld'))
-console.log(hello.endsWith('or', 9))
+console.log(hello.endsWith('or', 9)) // pass length
 
 console.log(hello.includes('or'))
 console.log(hello.includes('ot'))
@@ -38,7 +39,7 @@ console.log(hello.split(''))
 console.log(hello.split('  '))
 
 console.log(hello.substring(3,8))
-console.log(hello.substr(3,6))
+console.log(hello.substr(3,6)) // (index,length)
 
 console.log(hello.toLowerCase() === "hello world")
 
@@ -48,11 +49,11 @@ console.log(hello.trimStart())
 console.log(hello.trimEnd())
 
 var abc;
-if(abc === "" || abc === null || abc === undefined){
+if(abc === "" || abc === null || abc === undefined || abc == false){
 
 } 
 
-if(abc.includes('', null, undefined)){
+if(['', null, undefined,false].includes(abc)){
 
 }
 
@@ -60,5 +61,8 @@ let date = new Date();
 console.log(date)
 console.log(Date.now())
 console.log(date.getMonth())
+console.log(date.getDate())
 console.log(date.getDay())
+console.log(date.getFullYear())
+console.log(date.getHours())
 

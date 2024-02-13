@@ -107,7 +107,7 @@ const person4 = {
        // console.log(arguments)
         console.log(`${this.firstName} ${this.lastName} lives in ${city}, ${country}`)
     }
-}
+} 
 
 person4.fullName.call(person3, 'New Delhi', 'India') // this in general refer to person4 but in case i call then it refer to called function person 3
 person4.fullName.call(person3, 'Washintion', 'USA') 
