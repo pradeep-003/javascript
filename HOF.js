@@ -260,3 +260,48 @@ const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thu', 'Fri', 'Sat'];
 console.log(days[day])
 }
 getDayName();
+
+
+setTimeout(()=>{console.log("F")},3000);
+setTimeout(()=>{console.log("S")},2000);
+setTimeout(()=>{console.log("T")},1000);
+
+// output: 
+/*
+*T
+*S
+*F
+*/
+
+let callCount = 0;
+let rateLimitTimeout;
+
+function performOperation() {
+  console.log('Operation performed at:', new Date());
+}
+
+function rateLimitOperation() {
+  callCount++;
+  if (callCount > 3) {
+    console.log('Rate limit exceeded. Please wait...');
+    return;
+  }
+
+  clearTimeout(rateLimitTimeout);
+  rateLimitTimeout = setTimeout(() => {
+    callCount = 0;
+  }, 5000);
+
+  performOperation();
+}
+
+rateLimitOperation();
+rateLimitOperation();
+rateLimitOperation();
+rateLimitOperation();
+
+setTimeout(rateLimitOperation, 7000);
+setTimeout(rateLimitOperation, 8000);
+
+
+
