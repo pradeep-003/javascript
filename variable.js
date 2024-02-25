@@ -53,3 +53,15 @@ console.log("Hello, "+ name1+ " You are "+age+ " Years old");
 
 //string interpolation
 console.log(`Hello, ${name1} you are ${age} years old`);
+
+
+
+
+
+const data = new Set();
+data.add(4);
+data.add(5);
+data.add(6);
+data.forEach((value1,  value3) => {
+    console.log(`${value1}  : ${value3} `);
+  });

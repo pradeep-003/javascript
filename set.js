@@ -53,3 +53,21 @@ console.log(userFinal)
 const obj = Object.fromEntries(userFinal);
 console.log(obj);
 
+
+
+// set add method
+
+const setDemo1 = new Set();
+
+setDemo1.add(4);
+
+setDemo1.add(5);
+
+setDemo1.add({ user: "john@gmail.com" });
+
+setDemo1.forEach(item => {
+    if(item.user === "john@gmail.com"){
+        setDemo1.delete(item)
+    }
+})
+console.log(setDemo1);

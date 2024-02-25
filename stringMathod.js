@@ -16,7 +16,7 @@ console.log(hello.endsWith('or', 9)) // pass length
 console.log(hello.includes('or'))
 console.log(hello.includes('ot'))
 console.log(hello.includes('lo', 5))
-console.log(hello.includes('lo', 2))
+console.log(hello.includes('lo', 3))
 
 const hello = "Hello World";
 console.log(hello.padStart(20,'.')) // String  is immutable

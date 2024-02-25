@@ -41,14 +41,7 @@ console.log(typeof obj1)
 // 3rd way to create object
 // Using function
 
-function emp(id, name, salary){
-    this.id = id;
-    this.name = name;
-    this.salary = salary;
-}
-
-const emp_obj = new emp(1, "Vishwa", 7000)
-console.log(emp_obj) 
+ 
 
 
 const student = {
@@ -136,6 +129,5 @@ return x
 }
 
 console.log(randomNo_0to10())
-
 
 
